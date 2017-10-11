@@ -10,8 +10,6 @@ Everything here rests on the [www.choraleapp.com](https://www.choraleapp.com) do
 
 ## Browser support
 
-## Browser support
-
 Right now we support the latest versions of these browsers:
 
 + Chrome
