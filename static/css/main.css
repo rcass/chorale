@@ -574,7 +574,7 @@ u {
 
 .modal__container {
   background: #fff;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 40rem;
   max-height: 80vh;
   border-radius: 0.25rem;
@@ -592,8 +592,8 @@ u {
 .modal__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.2rem;
+  line-height: 1;
   color: #1965FF;
   box-sizing: border-box; }
 
@@ -604,10 +604,6 @@ u {
 
 .modal__header .modal__close::before {
   content: "\2715"; }
-
-.modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
 
 /**************************  Demo Animation Style
 \**************************/

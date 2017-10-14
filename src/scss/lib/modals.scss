@@ -21,7 +21,7 @@
 
 .modal__container {
   background: #fff;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 40rem;
   max-height: 80vh;
   border-radius: 0.25rem;
@@ -38,8 +38,8 @@
 .modal__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.2rem;
+  line-height: 1;
   color: $brand-main;
   box-sizing: border-box;
 }
@@ -51,11 +51,6 @@
 }
 
 .modal__header .modal__close::before { content: "\2715"; }
-
-.modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 
 
 
