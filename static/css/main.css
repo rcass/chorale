@@ -362,6 +362,10 @@ u {
 .horizontal-list li {
   display: inline-block; }
 
+.half-list li {
+  display: inline-block;
+  width: 48%; }
+
 .float-right {
   float: right; }
 
@@ -703,11 +707,9 @@ u {
   margin-right: 0.5rem;
   border: 0;
   background: transparent;
-  border-radius: 0.25rem;
   border: 0.1rem solid transparent;
   cursor: pointer;
-  display: inline-table;
-  text-align: center; }
+  display: inline-table; }
   .btn--block {
     width: 100%; }
   .btn--primary svg path, .btn--secondary svg path {
@@ -853,7 +855,7 @@ u {
     position: absolute;
     width: 100%;
     z-index: 5; }
-    .nav-mobile.nav-mobile--light svg path {
+    .nav-mobile.nav-mobile--light .nav-mobile__menu path {
       fill: #fff; }
     .nav-mobile__logo img {
       height: 1.4rem;
@@ -884,16 +886,15 @@ u {
     display: block; }
   .nav-mobile.nav-mobile--active .nav-mobile__list {
     display: block;
-    background: #fff;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-    position: fixed;
     width: calc(100% - 2rem);
-    top: 2rem;
-    margin: 1rem;
+    background: #fff;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
     animation: fadeup 0.2s; }
     .nav-mobile.nav-mobile--active .nav-mobile__list ul {
-      line-height: 1.8;
-      font-size: 1.6rem; }
+      line-height: 1.8; }
     .nav-mobile.nav-mobile--active .nav-mobile__list a {
       color: #000; } }
 
