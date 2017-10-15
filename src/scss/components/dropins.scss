@@ -87,6 +87,11 @@ u {
   display: inline-block;
 }
 
+.half-list li {
+  display: inline-block;
+  width: 48%;
+}
+
 .float-right { float: right; }
 .float-fix { position: relative; top: -3.5rem; }
 

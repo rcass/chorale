@@ -94,11 +94,9 @@
   margin-right: 0.5rem;
   border: 0;
   background: transparent;
-  border-radius: 0.25rem;
   border: 0.1rem solid transparent;
   cursor: pointer;
   display: inline-table;
-  text-align: center;
 
   // Different form
   &--block {
@@ -303,8 +301,8 @@
     width: 100%;
     z-index: index($layers, navroot);
 
-    &.nav-mobile--light {
-      svg path { fill: #fff; }
+    &.nav-mobile--light .nav-mobile__menu path {
+      fill: #fff;
     }
 
     // Menu specific
@@ -347,17 +345,16 @@
     // Show links
     .nav-mobile__list {
       display: block;
-      background: #fff;
-      box-shadow: $shadow1;
-      position: fixed;
       width: calc(100% - 2rem);
-      top: 2rem;
-      margin: 1rem;
+      background: $default-bg;
+      box-shadow: $shadow2;
+      position: absolute;
+      top: 3rem;
+      left: 1rem;
       animation: fadeup 0.2s;
 
       ul {
         line-height: 1.8;
-        font-size: 1.6rem;
       }
 
       a {
