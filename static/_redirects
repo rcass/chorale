@@ -1,6 +1,2 @@
 # Redirects from what the browser requests to what we serve
-<<<<<<< HEAD
-/contact            /support
-=======
-#/contact            /support/contact
->>>>>>> newsupportcenter
+/support/contact            /contact
