@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*! What I Can't Live Without in CSS | MIT | github.com/mistermantas */
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   background: #fff;
   color: #292929;
   line-height: 1.5;
@@ -268,7 +268,7 @@ svg {
     fill: #292929; }
 
 a {
-  color: #1965FF; }
+  color: #000; }
   a:hover {
     color: #000; }
   a:active {
@@ -307,6 +307,12 @@ img[data-src] {
   width: 3rem;
   margin: 2rem 0;
   background: currentColor; }
+
+.right-border {
+  border-right: 0.1rem solid rgba(0, 0, 0, 0.125); }
+
+hr {
+  margin: 0; }
 
 u {
   text-decoration: none;
@@ -362,6 +368,9 @@ u {
 .horizontal-list li {
   display: inline-block; }
 
+.horizontal-list--padded li {
+  padding-right: 1.8rem; }
+
 .half-list li {
   display: inline-block;
   width: 48%; }
@@ -376,7 +385,7 @@ u {
 .silent {
   color: #fff; }
   .silent:hover {
-    color: #1965FF; }
+    color: #000; }
 
 .white {
   color: #fff; }
@@ -387,9 +396,9 @@ u {
   color: #000; }
 
 .highlighted {
-  color: #1965FF; }
+  color: #000; }
   .highlighted svg path {
-    fill: #1965FF; }
+    fill: #000; }
 
 .center {
   text-align: center; }
@@ -467,7 +476,7 @@ u {
   .hero--transparent {
     background-color: transparent; }
   .hero--branded {
-    background-image: linear-gradient(90deg, #16A0E5, #1965FF); }
+    background-image: linear-gradient(90deg, #F4E10C, #000); }
 
 @media (max-width: 640px) {
   .hero__container {
@@ -541,7 +550,7 @@ u {
       font-weight: bold;
       padding: 1rem;
       float: right;
-      color: #1965FF;
+      color: #000;
       position: relative;
       top: 0.15rem; }
 
@@ -598,7 +607,7 @@ u {
   margin-bottom: 0;
   font-size: 1.2rem;
   line-height: 1;
-  color: #1965FF;
+  color: #000;
   box-sizing: border-box; }
 
 .modal__close {
@@ -625,25 +634,32 @@ u {
  * Elements
  */
 .h0 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h2 {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h4 {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h5 {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .h6 {
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif; }
 
 @media (max-width: 768px) {
   .h0 {
@@ -652,7 +668,8 @@ u {
 .markdown-container h1, .markdown-container h2, .markdown-container h4, .markdown-container h5, .markdown-container h6 {
   color: #000;
   margin-top: 2rem;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 0.8rem;
+  font-family: 'Montserrat', sans-serif; }
 
 .markdown-container h3 {
   opacity: 0.6; }
@@ -728,14 +745,14 @@ u {
   .btn--rough {
     border-radius: 0; }
   .btn--primary {
-    background: #1965FF;
+    background: #000;
     color: #fff; }
     .btn--primary:hover {
       background: #000;
       color: white; }
   .btn--secondary {
-    background: #16A0E5;
-    color: #fff; }
+    background: #F4E10C;
+    color: #000; }
     .btn--secondary:hover {
       background: #000;
       color: white; }
@@ -768,45 +785,55 @@ u {
       border: currentColor dotted 0.1rem; }
 
 .highlighted-bg {
-  background: #e8f0ff; }
+  background: #e6e6e6; }
 
 .card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+  border: 0.1rem solid rgba(0, 0, 0, 0.125);
+  transition: border 0.2s, border-color 0.2s;
+  padding: 2rem;
+  display: inline-table; }
+  .card:hover {
+    border-color: transparent;
+    box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25); }
+
+.pricing-card {
   color: #292929;
-  background: #e8f0ff; }
-  .card__content {
+  background: #e6e6e6; }
+  .pricing-card__content {
     border-top: 0.1rem solid #dedede; }
-  .card__header {
+  .pricing-card__header {
     padding: 2rem 2.6rem; }
-  .card__content {
+  .pricing-card__content {
     padding: 1rem; }
 
 @media (min-width: 768px) {
-  .col:nth-child(1) .card .btn {
+  .col:nth-child(1) .pricing-card .btn {
     border-right: 0; }
-  .col:nth-child(3) .card .btn {
+  .col:nth-child(3) .pricing-card .btn {
     border-left: 0; } }
 
-.card--primary {
-  border-color: #1965FF; }
-  .card--primary .card__header {
-    background: #1965FF;
+.pricing-card--primary {
+  border-color: #000; }
+  .pricing-card--primary .pricing-card__header {
+    background: #000;
     color: #fff;
-    border-bottom-color: #1965FF; }
-  .card--primary .card__btn-cover {
-    background: #1965FF; }
+    border-bottom-color: #000; }
+  .pricing-card--primary .pricing-card__btn-cover {
+    background: #000; }
 
 @media (max-width: 768px) {
-  .card--primary {
+  .pricing-card--primary {
     transform: none; } }
 
-.card--secondary {
-  border-color: #16A0E5; }
-  .card--secondary .card__header {
-    background: #16A0E5;
-    color: #fff;
-    border-bottom-color: #16A0E5; }
-  .card--secondary .card__btn-cover {
-    background: #16A0E5; }
+.pricing-card--secondary {
+  border-color: #F4E10C; }
+  .pricing-card--secondary .pricing-card__header {
+    background: #F4E10C;
+    color: #000;
+    border-bottom-color: #F4E10C; }
+  .pricing-card--secondary .pricing-card__btn-cover {
+    background: #F4E10C; }
 
 /**
  * Navigation
@@ -907,8 +934,12 @@ u {
   z-index: 4; }
 
 .header-cover {
-  height: 3.3rem;
+  height: 3.25rem;
   background: #1a1a1a; }
+
+@media (min-width: 768px) {
+  .header-cover {
+    height: 3.5rem; } }
 
 /**
  * Globals
@@ -939,26 +970,13 @@ u {
 .brand-section {
   padding: 6rem 0;
   color: #fff;
-  background: #1965FF; }
-
-.footer-promo {
-  padding: 2rem;
-  background: #1a1a1a;
-  color: white; }
-  .footer-promo .btn--primary {
-    background: #fff;
-    color: #000; }
-  .footer-promo .btn--border {
-    color: #fff; }
+  background: #000; }
 
 .pre-footer {
-  padding: 2rem 0;
   padding-bottom: 3rem;
-  background: #1f1f1f;
-  color: white;
   line-height: 1.25; }
   .pre-footer .sponsor {
-    height: 2rem;
+    height: 1rem;
     width: auto;
     margin: 0.6rem 2rem;
     filter: grayscale(1); }
@@ -973,39 +991,33 @@ u {
   .pre-footer .sponsor[alt="Netlify"] {
     transform: scale(1.125); }
 
-.choices-on-right {
-  padding: 1.8rem 0; }
-  .choices-on-right .break-sm {
-    display: none; }
-  @media (max-width: 768px) {
-    .choices-on-right__init, .choices-on-right__cta, .choices-on-right .break-sm {
-      display: block; }
-    .choices-on-right .float-fix {
-      position: static; }
-    .choices-on-right .float-right {
-      float: none; } }
+.choices-on-right .break-sm {
+  display: none; }
+
+@media (max-width: 768px) {
+  .choices-on-right__init, .choices-on-right__cta, .choices-on-right .break-sm {
+    display: block; }
+  .choices-on-right .float-fix {
+    position: static; }
+  .choices-on-right .float-right {
+    float: none; } }
 
 .footer {
-  background: #262626;
-  color: white;
   padding: 2rem; }
-  .footer a {
-    color: #d6d6d6; }
-    .footer a:hover {
-      color: #1965FF; }
   .footer__icons svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    margin: 0.25rem; }
-    .footer__icons svg:hover path {
-      fill: #1965FF; }
+    height: 1.125rem;
+    width: 1.125rem;
+    margin: 0.8rem;
+    float: right; }
   .footer ul {
     line-height: 1.8; }
   .footer__logo {
-    width: 50%;
-    height: auto; }
+    height: 2rem;
+    position: relative;
+    top: 0.6rem;
+    margin-right: 0.6rem; }
   .footer svg path {
-    fill: white; }
+    fill: #000; }
 
 /**
  * Other
@@ -1053,26 +1065,26 @@ u {
       padding-top: 1.5rem; }
   .comparison-table .feature {
     padding: 0.8rem;
-    border-right-color: #1965FF; }
+    border-right-color: #000; }
     .comparison-table .feature--last {
       border-bottom: 0; }
   .comparison-table td {
     border-bottom: 0.1rem solid #dedede;
     border-top: 0.1rem solid #dedede; }
   .comparison-table td.chorale {
-    border-color: #1965FF;
-    border-left: 0.1rem solid #1965FF;
-    border-right: 0.1rem solid #1965FF;
+    border-color: #000;
+    border-left: 0.1rem solid #000;
+    border-right: 0.1rem solid #000;
     padding: 0.25rem 1.25rem; }
     .comparison-table td.chorale svg path {
-      fill: #1965FF; }
+      fill: #000; }
   .comparison-table th.chorale {
-    border-left: 0.1rem solid #1965FF;
-    border-right: 0.1rem solid #1965FF;
-    border-top-color: #1965FF;
-    background: #1965FF; }
+    border-left: 0.1rem solid #000;
+    border-right: 0.1rem solid #000;
+    border-top-color: #000;
+    background: #000; }
     .comparison-table th.chorale.last {
-      border-bottom: 0.1rem solid #1965FF; }
+      border-bottom: 0.1rem solid #000; }
 
 .article {
   color: inherit;
@@ -1116,6 +1128,9 @@ u {
 /**
  * Page specific
  */
+.help .footer__breaker {
+  display: none; }
+
 .index .hero--flat {
   color: #000;
   background-color: #e5e5e5; }
@@ -1125,7 +1140,7 @@ u {
     color: #000; }
 
 .index .hero {
-  background: linear-gradient(135deg, #0e0c17, #1c120a); }
+  background: #161616; }
   .index .hero .hero__phone {
     display: block;
     margin: 0 auto;
