@@ -1,0 +1,28 @@
+{{ partial "meta.html" . }}
+<body class="help">
+{{ partial "nav-light.html" . }}
+<div class="header-cover"></div>
+<div class="row">
+  <aside class="col-quarter right-border">
+    <div class="container right"><div class="container"><div class="container">
+      <h1 class="h4 bold"><b>Help Center</b></h1>
+
+      <ul class="no-bullet">
+        <li><a href="/support">Welcome</a></li>
+        &nbsp;
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div></div></div>
+  </aside>
+  <main class="col">
+    <div class="container container--narrow"><div class="container">
+      <div class="break"></div>
+      <div class="break"></div>
+      {{ .Content }}
+      <div class="break"></div>
+      <div class="break"></div>
+    </div></div>
+  </main>
+</div>
+<hr>
+{{ partial "footer.html" . }}

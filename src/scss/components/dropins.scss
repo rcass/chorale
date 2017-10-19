@@ -18,6 +18,16 @@
   background: currentColor;
 }
 
+// Border
+.right-border {
+  border-right: 0.1rem solid rgba(#000, 0.125);
+}
+
+// Horizontal line
+hr {
+  margin: 0;
+}
+
 // Prettier underline
 u {
   text-decoration: none;
@@ -87,6 +97,11 @@ u {
   display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+.horizontal-list--padded li { padding-right: 1.8rem; }
+
+>>>>>>> newsupportcenter
 .half-list li {
   display: inline-block;
   width: 48%;
