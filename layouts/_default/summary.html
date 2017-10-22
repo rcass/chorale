@@ -1,24 +1,20 @@
-<article class="article">
-  <img src="https://image.crisp.chat/avatar/operator/cadc4207-3c89-4033-a436-8670701b7839/80/?avatar=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Fcadc4207-3c89-4033-a436-8670701b7839%2Fb7361758-4256-46cf-90f4-435af9c066b0.jpg" class="article__author">
-
+<article class="small-article">
   <a href="{{ .Permalink }}">
-    <img src="{{ .Params.image }}" class="article__image">
-  </a>
+    <div class="background" style="background-image: url({{ .Params.image }})"></div>
 
-  <div class="article__details">
-    <a href="{{ .Permalink }}"></a>
-    <h1 class="h2 center"><b>
+    <div class="break-sm"></div>
+
+    <small class="caps ingrained"><b>{{ .Date.Format "January 2, 2006" }} &nbsp; &middot; &nbsp; {{ .ReadingTime }} min read</b></small>
+    <h1 class="h2"><b>
       <a href="{{ .Permalink }}" class="bold">{{ .Title }}</a>
     </b></h1>
-    <p class="center ingrained">a {{ .ReadingTime }} minute read by Mantas Vilčinskas on {{ .Date.Format "January 2, 2006" }}</p>
 
     <p>{{ .Params.description }}</p>
 
-    <a href="{{ .Permalink }}" class="highlighted">Read more
+    <a href="{{ .Permalink }}" class="highlighted"><b>Read more</b>
       <svg viewBox="0 0 24 24">
         <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
       </svg>
     </a>
-  </div>
+  </a>
 </article>
-<div class="break"></div>

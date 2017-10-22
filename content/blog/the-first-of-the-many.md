@@ -5,7 +5,6 @@ image = "/article-img/some-guy.jpg"
 comments = "https://www.reddit.com/r/choraleapp/comments/6yp6xd/mesa_is_the_first_artist_to_join_chorale/"
 type = "post"
 date = "2017-08-24"
-darken = ".4"
 +++
 
 First, who even *is* MESA? Not many people may know him, but he has been making music since 2013, with different aliases and stage names. MESA makes electronic dance music: future bass, tropical house, and so on. MESA has released just one track at the time of writing, a house track named *Home*.

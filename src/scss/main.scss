@@ -25,20 +25,23 @@
  */
 
 
-
+.hx { font-size: 4rem;   font-family: 'Montserrat', sans-serif; }
 .h0 { font-size: 2.5rem; font-family: 'Montserrat', sans-serif; }
 .h1 { font-size: 2rem;   font-family: 'Montserrat', sans-serif; }
 .h2 { font-size: 1.6rem; font-family: 'Montserrat', sans-serif; }
 .h3 { font-size: 1.5rem; font-family: 'Montserrat', sans-serif; }
 .h4 { font-size: 1.4rem; font-family: 'Montserrat', sans-serif; }
-.h5 { font-size: 1.2rem; font-family: 'Montserrat', sans-serif; }
-.h6 { font-size: 0.9rem; font-family: 'Montserrat', sans-serif; }
+.h5 { font-size: 1.125rem; }
 
 @media (max-width: 768px) {
   .h0 { font-size: 1.8rem; }
 }
 
 .markdown-container {
+  a {
+    border-bottom: 0.1rem solid currentColor;
+  }
+
   h1, h2, h4, h5, h6 {
     color: $bold-text-color;
     margin-top: 2rem;
@@ -46,7 +49,7 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  h3 { opacity: 0.6; }
+  h3, h5, h6 { opacity: 0.6; }
 
   table {
     margin: 2rem 0;
@@ -130,9 +133,9 @@
   &--sq { padding: 0.8rem; }
   &--rough { border-radius: 0; }
 
-  // Variants
+  // Legacy
   &--primary {
-    background: $brand-main;
+    background: #000;
     color: #fff;
 
     &:hover {
@@ -142,7 +145,7 @@
   }
 
   &--secondary {
-    background: $brand-secondary;
+    background: #000;
     color: #000;
 
     &:hover {
@@ -151,6 +154,7 @@
     }
   }
 
+  // New
   &--black {
     background: #000;
     color: #fff;
@@ -175,6 +179,15 @@
 
     &:hover {
       background: rgba(#000, 0.2);
+    }
+  }
+
+  &--bladarkborder {
+    border-color: rgba(#000, 0.2);
+    color: #000;
+
+    &:hover {
+      border-color: rgba(#000, 0.4);
     }
   }
 
@@ -204,21 +217,21 @@
 }
 
 .card {
-  box-shadow: $shadow1;
   border: 0.1rem solid rgba(#000, 0.125);
   transition: border 0.2s, border-color 0.2s;
   padding: 2rem;
-  display: inline-table;
+  display: block;
+  margin: 0 0.6rem;
+  will-change: transform;
+  transition: transform 0.2s;
 
-  &:hover {
-    border-color: transparent;
-    box-shadow: $shadow2;
+  &:active {
+    transform: scale(0.98);
   }
 }
 
 .pricing-card {
-  color: $regular-text-color;
-  background: $accented-bg;
+  background: #eee;
 
   &__content {
     border-top: 0.1rem solid $border-color;
@@ -234,31 +247,27 @@
 }
 
 .pricing-card--primary {
-  border-color: $brand-main;
+  border: 0;
 
   .pricing-card__header {
-    background: $brand-main;
-    color: #fff;
-    border-bottom-color: $brand-main;
+    background: mix(#000, $border-color, 0);
+    color: #000;
+    border-bottom-color: mix(#000, $border-color, 0%);
   }
 
-  .pricing-card__btn-cover { background: $brand-main; }
-}
-
-@media (max-width: 768px) {
-  .pricing-card--primary { transform: none; }
+  .pricing-card__btn-cover { background: mix(#000, $border-color, 0%); }
 }
 
 .pricing-card--secondary {
-  border-color: $brand-secondary;
+  border: 0;
 
   .pricing-card__header {
-    background: $brand-secondary;
+    background: mix(#000, $border-color, 4%);
     color: #000;
-    border-bottom-color: $brand-secondary;
+    border-bottom-color: mix(#000, $border-color, 4%);
   }
 
-  .pricing-card__btn-cover { background: $brand-secondary; }
+  .pricing-card__btn-cover { background: mix(#000, $border-color, 4%); }
 }
 
 
@@ -392,7 +401,7 @@
 // Old relic
 .header-cover {
   height: 3.25rem;
-  background: mix($default-bg, $bold-text-color, 10%);
+  background-color: #dedede;
 }
 
 @media (min-width: 768px) {
@@ -476,8 +485,6 @@
 
 
 .footer {
-  padding: 2rem;
-
   &__icons svg {
     height: 1.125rem;
     width: 1.125rem;
@@ -597,33 +604,30 @@
   }
 }
 
-.article {
-  color: inherit;
-  border: 0.1rem solid #dedede;
-  display: block;
+.small-article {
+  display: inline-table;
+  padding: 1.5rem 0.5rem;
+  width: calc(33.3% - 0.5rem);
 
-  &__author {
-    margin: 0 auto;
-    position: relative;
-    top: -2rem;
+  .background { min-height: 12rem; }
+}
+
+.long-article {
+  margin: 0.5rem;
+
+  &__details, &__bg { min-height: 20rem; }
+  &__details .container { padding: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .long-article__details {
+    border: 0.1rem solid rgba($bold-text-color, 0.125);
+    border-top: 0;
+  }
+
+  .small-article {
     display: block;
-    border: 0.1rem solid #dedede;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    z-index: index($layers, contentpush);
-  }
-
-  &__image {
     width: 100%;
-    height: 100%;
-    position: relative;
-    top: -3rem;
-  }
-
-  &__details {
-    padding: 3rem;
-    padding-top: 0;
   }
 }
 
@@ -652,7 +656,21 @@
  * Page specific
  */
 
-.help .footer__breaker { display: none; }
+.hide-footer-breaker .footer__breaker { display: none; }
+
+.help-sidebar {
+  padding: 2.75rem;
+  border-bottom: 0.1rem solid rgba(#000, 0.125);
+}
+
+@media (min-width: 768px) {
+  .help-sidebar {
+    border-right: 0.1rem solid rgba(#000, 0.125);
+    padding: 0 1rem;
+    padding-right: 2rem;
+    border-bottom: 0;
+  }
+}
 
 .index .hero--flat {
   color: #000;
@@ -663,16 +681,12 @@
 }
 
 .index .hero {
-  //background: linear-gradient(135deg, #0e0c17, #1c120a);
-  background: #161616;
+  background: #dedede;
+  color: #000;
+}
 
-  .hero__phone {
-    display: block;
-    margin: 0 auto;
-    height: 18rem;
-    width: auto;
-    transform: scale(1.75);
-  }
+.index .hero img {
+  animation: fadeup 0.4s;
 }
 
 .poly-mask svg {

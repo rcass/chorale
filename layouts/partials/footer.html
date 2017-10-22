@@ -1,35 +1,25 @@
+<hr class="footer__breaker">
 <footer class="footer">
   <div class="container">
-    <hr class="footer__breaker">
     <div class="break"></div>
     <div class="choices-on-right">
       <div class="choices-on-right__init">
-        <span class="h3 bold"><b>End of the page, buddy.</b></span><br>
-        Some of these may be useful. Or not.
+        <span class="h3 bold"><b>It’s music time.</b></span><br>
+        All in this world love music.
       </div>
 
       <div class="footer-promo__cta float-right float-fix">
         <div class="break-sm"></div>
-        <a href="/pricing" class="btn btn--primary">
-          Try Chorale
+        <a href="/early-access" class="btn btn--black">
+          Try Chorale free
         </a>
       </div>
     </div>
 
     <div class="break"></div><div class="break-sm"></div>
 
-
     <ul class="no-bullet horizontal-list horizontal-list--padded">
-      <li><a href="/blog">Newsroom</a></li>
-      <li><a href="/brand">Brand</a></li>
-      <li><a href="/early-access">Early Access</a></li>
-      <li><a href="/contribute">Contribute</a></li>
-      <li><a href="/legal">Legal</a></li>
-      <li><a href="https://status.choraleapp.com">Status
-        <svg viewBox="0 0 24 24">
-          <path fill="#fff" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-        </svg>
-      </a></li>
+      {{ partial "nav-items-secondary.html" . }}
     </ul>
 
     <div class="break-sm"></div>
@@ -71,8 +61,9 @@
     </span>
 
     <div class="break-sm"></div>
-    <p class="ingrained"><small>Thank you to <a href="https://rabbitnode.com/?rel=choraleapp.com">RabbitNode</a> and <a href="https://crisp.chat/livechat/?ref=chatbox&domain=choraleapp.com&name=Chorale">Crisp</a> for helping us push Chorale forward.</small></p>
+    <p class="ingrained"><small>Thank you to <a href="https://rabbitnode.com/?rel=choraleapp.com">RabbitNode</a> and <a href="https://crisp.chat/livechat/?ref=chatbox&domain=choraleapp.com&name=Chorale">Crisp</a> for their help.</small></p>
   </div>
+  <div class="break"></div>
 </footer>
 
 
@@ -93,7 +84,9 @@ html .crisp-client .crisp-1 .crisp-40 .crisp-42 .crisp-112 .crisp-113 .crisp-114
     bottom: 56px !important;
 }
 
-html .crisp-client .crisp-1 .crisp-95, .crisp-client .crisp-1 .crisp-95 * { font-family: 'Montserrat', sans-serif !important; }
+
+html .crisp-client .crisp-1 .crisp-54,.crisp-client .crisp-1 .crisp-54 *,
+html .crisp-client .crisp-1 .crisp-95, .crisp-client .crisp-1 .crisp-95 * { font-family: sans-serif !important; }
 </style>
 
 </body></html>

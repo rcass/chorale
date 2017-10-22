@@ -3,7 +3,6 @@ title: Chorale’s got a new look
 description: This month we updated our logo and upgraded our pages to make them look better. Or just acceptable, really. Plus, the legal agreement has been updated and we have a new contributor.
 date: 2017-10-08
 image: /article-img/color-child.jpg
-darken: .25
 comments: https://www.reddit.com/r/choraleapp/comments/74wegt/new_look_for_chorale_megathread/
 type: post
 ---

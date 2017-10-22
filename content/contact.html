@@ -1,22 +1,30 @@
 ---
 title: Contact support
 description: We usually respond in a few hours or even just minutes.
-type: help
+type: help-raw
 ---
 
-<small class="ingrained caps">Contact support</small>
-<h1 class="h1 bold"><b>Hi! Greetings! Hello. Ello!</b></b></h1>
+<div class="break"></div><div class="break-sm"></div>
+
+<small class="ingrained caps"><b>Contact support</b></small>
+<h1 class="h1 bold"><b>Not finding the right answer?</b></b></h1>
 <p>Want to use live chat or email us? Use the widget on the bottom right
    to get in touch with us using our support tool. We’ll get back to you
    in a few hours or minutes. We are guaranteed to reply between 12:00
    and 20:00 UTC. <a href="//time.is/UTC"><u>What time that is for me?</u></a></p>
 
 <div class="break-sm"></div>
-<button onclick="$crisp.push(['do', 'chat:open'])" class="btn btn--primary">
-  <svg viewBox="0 0 33 27"><defs><path d="M26.616 36.896l4.289 4.514 3.305-5.385 8.827-1.014L41.544 19.5l-25.507 2.928 1.493 15.511 9.086-1.043z" id="b"/></defs><g transform="translate(-13 -18)" fill="none" fill-rule="evenodd"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use stroke="#FFF" stroke-width="2" fill="#FFF" xlink:href="#b"/></g></svg>
-  &nbsp;
-  Chat with us!
-</button>
+<div class="btn-group">
+  <button onclick="$crisp.push(['do', 'chat:open'])" class="btn btn--primary">
+    <svg viewBox="0 0 33 27"><defs><path d="M26.616 36.896l4.289 4.514 3.305-5.385 8.827-1.014L41.544 19.5l-25.507 2.928 1.493 15.511 9.086-1.043z" id="b"/></defs><g transform="translate(-13 -18)" fill="none" fill-rule="evenodd"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use stroke="#FFF" stroke-width="2" fill="#FFF" xlink:href="#b"/></g></svg>
+    &nbsp;
+    Chat with us!
+  </button>
+
+  <button class="btn btn--border" data-micromodal-trigger="email-form">
+    Send an email
+  </button>
+</div>
 
 
 <p><small class="faded">or ask the community for help in these places</small></p>
@@ -41,3 +49,65 @@ type: help
     Reddit
   </a>
 </div>
+
+<div class="break"></div><div class="break-sm"></div>
+
+
+
+
+
+
+
+
+
+
+<!-- Contact form -->
+<div class="modal micromodal-slide" id="email-form" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="email-form-title" aria-describedby="email-form-content">
+      <div role="document">
+        <header class="modal__header">
+          <h3 class="modal__title" id="email-form-title">
+            <b>Send us an email</b>
+          </h3>
+          <button class="modal__close" aria-label="Close modal" aria-controls="modal__container1" data-micromodal-close></button>
+        </header>
+        <div class="break-sm"></div>
+
+
+        <form name="contact" action="/contact#success" method="post"><input type="hidden" name="form-name" value="contact">
+          <label for="name">Name</label>
+          <div>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <label for="_replyto">Email</label>
+          <div>
+            <input type="email" id="_replyto" name="_replyto" required>
+          </div>
+
+          <label for="name">Message</label>
+          <div>
+            <textarea name="message" id="message" rows="6" cols="20" required=""></textarea>
+          </div>
+
+          <input type="text" name="_gotcha" hidden>
+
+          <button value="Send" class="btn btn--primary">Send</button><br><br>
+
+          <span class="ingrained">Fill out all fields.</span>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+window.onload = function() {
+  if (window.location.hash === '#success') {
+    var sentNotif = new Snackbar('Got it. Email sent!');
+  }
+}
+</script>

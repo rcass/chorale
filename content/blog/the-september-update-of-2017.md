@@ -3,7 +3,6 @@ title: It’s September, 2017! What’s new?
 description: Well, a lot, it seems. The seeming lack of updates or any activity on our Discord suggests something is going wrong, so let’s unravel this mystery.
 date: 2017-09-25
 image: /article-img/happy-girls.jpg
-darken: .25
 comments: https://www.reddit.com/r/choraleapp/comments/71xnrl/chorale_changelog_september_2017_megathread/
 type: post
 ---

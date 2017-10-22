@@ -1,28 +1,46 @@
 {{ partial "meta.html" . }}
 <body class="help">
-{{ partial "nav-light.html" . }}
+{{ partial "nav.html" . }}
 <div class="header-cover"></div>
-<div class="row">
-  <aside class="col-quarter right-border">
-    <div class="container right"><div class="container"><div class="container">
-      <h1 class="h4 bold"><b>Help Center</b></h1>
 
-      <ul class="no-bullet">
-        <li><a href="/support">Welcome</a></li>
-        &nbsp;
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div></div></div>
-  </aside>
-  <main class="col">
-    <div class="container container--narrow"><div class="container">
-      <div class="break"></div>
-      <div class="break"></div>
-      {{ .Content }}
-      <div class="break"></div>
-      <div class="break"></div>
-    </div></div>
-  </main>
+<div class="container container--unpadded">
+  <div class="row">
+    <aside class="col-quarter help-sidebar">
+      <div class="break"></div><div class="break-sm"></div>
+      <h1 class="h2 ingrained"><b>
+        <a href="/support/" class="bold ingrained">How can we help you?</a>
+      </b></h1>
+      <div class="break-sm"></div>
+
+      {{ partial "help-items.html" . }}
+
+      <div class="break"></div><div class="break-sm"></div>
+    </aside>
+    <main class="col">
+      <div class="container container--narrow"><div class="container">
+        <div class="break"></div>
+        <small class="caps ingrained"><b>{{ .Params.Category }}</b></small>
+        <h1 class="h0 bold"><b>{{ .Title }}</b></h1>
+
+        <div class="markdown-container">
+          {{ .Content }}
+        </div>
+        <div class="break"></div>
+      </div></div>
+
+      <hr>
+      <div class="container container--narrow"><div class="container">
+        <div class="break"></div>
+        <p class="h5"><strong>Was this article helpful?</strong></p>
+        <p>If so, great! However, you may have a few follow-up questions or maybe
+           saw something wrong, perhaps outdated? Whatever troubles you are
+           having, <a href="/contact"><u>we are here to help</u></a>!</p>
+
+        <p class="ingrained">This article was last updated on {{ .Date.Format "January 2, 2006" }}.</p>
+        <div class="break"></div>
+      </div></div>
+    </main>
+  </div>
 </div>
-<hr>
+
 {{ partial "footer.html" . }}
