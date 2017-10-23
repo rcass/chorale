@@ -40,5 +40,5 @@
     <meta property="og:title" content="{{ .Title }}">
     <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="canonical" content="{{ .Permalink }}">
-    <meta name="theme-color" content="#{{ if .Params.color }}{{ .Params.color }}{{ else }}{{ if eq .Title .Site.Title }}2a2a2a{{ else }}dedede{{ end }}{{ end }}">
+    <meta name="theme-color" content="#{{ if .Params.color }}{{ .Params.color }}{{ else }}{{ if eq .Title .Site.Title }}dedede{{ else }}dedede{{ end }}{{ end }}">
   </head>
