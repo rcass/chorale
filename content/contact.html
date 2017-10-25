@@ -75,7 +75,7 @@ type: help-raw
         <div class="break-sm"></div>
 
 
-        <form name="contact" action="/contact#success" method="post"><input type="hidden" name="form-name" value="contact">
+        <form name="contact" action="mailto:youremail@youremail.com" method="post"><input type="hidden" name="form-name" value="contact">
           <label for="name">Name</label>
           <div>
             <input type="text" id="name" name="name" required>
@@ -93,7 +93,7 @@ type: help-raw
 
           <input type="text" name="_gotcha" hidden>
 
-          <button value="Send" class="btn btn--primary">Send</button><br><br>
+          <button type="submit" value="Send Email" class="btn btn--primary">Send</button><br><br>
 
           <span class="ingrained">Fill out all fields.</span>
         </form>
